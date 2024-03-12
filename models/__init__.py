@@ -1,7 +1,6 @@
 # coding: utf-8
 
 # flake8: noqa
-
 """
     Cashfree Verification API's.
 
@@ -15,21 +14,7 @@
 """  # noqa: E501
 
 
-__version__ = "1.0.3"
-
-# import apis into sdk package
-# import ApiClient
-from cashfree_verification.api_response import ApiResponse
-from cashfree_verification.api_client import ApiClient
-from cashfree_verification.configuration import Configuration
-from cashfree_verification.exceptions import OpenApiException
-from cashfree_verification.exceptions import ApiTypeError
-from cashfree_verification.exceptions import ApiValueError
-from cashfree_verification.exceptions import ApiKeyError
-from cashfree_verification.exceptions import ApiAttributeError
-from cashfree_verification.exceptions import ApiException
-
-# import models into sdk package
+# import models into model package
 from cashfree_verification.models.aadhaar_masking_response_schema import AadhaarMaskingResponseSchema
 from cashfree_verification.models.aadhaar_ocr_request_schema import AadhaarOcrRequestSchema
 from cashfree_verification.models.aadhaar_ocr_response_schema import AadhaarOcrResponseSchema
