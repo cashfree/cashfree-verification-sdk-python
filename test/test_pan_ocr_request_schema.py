@@ -40,12 +40,12 @@ class TestPanOcrRequestSchema(unittest.TestCase):
         if include_optional :
             return PanOcrRequestSchema(
                 verification_id = '12345678', 
-                front_image = '[B@a11efe6'
+                front_image = '[B@b63365c'
             )
         else :
             return PanOcrRequestSchema(
                 verification_id = '12345678',
-                front_image = '[B@a11efe6',
+                front_image = '[B@b63365c',
         )
         """
 

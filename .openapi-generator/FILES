@@ -22,7 +22,6 @@ cashfree_verification/api/panto_gstin_api.py
 cashfree_verification/api/passport_api.py
 cashfree_verification/api/reverse_geocoding_api.py
 cashfree_verification/api/reverse_penny_drop_api.py
-cashfree_verification/api/upi_api.py
 cashfree_verification/api/vehicle_rc_api.py
 cashfree_verification/api/voter_id_api.py
 cashfree_verification/api_client.py
@@ -114,17 +113,12 @@ cashfree_verification/models/reverse_geocoding_request_schema.py
 cashfree_verification/models/reverse_geocoding_response_schema.py
 cashfree_verification/models/split_address.py
 cashfree_verification/models/split_address_schema.py
-cashfree_verification/models/upi_advance_request_schema.py
-cashfree_verification/models/upi_advance_response_schema.py
-cashfree_verification/models/upi_mobile_request_schema.py
-cashfree_verification/models/upi_mobile_response_schema.py
 cashfree_verification/models/v2_error_response404_schema_ip_verification.py
 cashfree_verification/models/validity_details.py
 cashfree_verification/models/vehicle_rc_request_schema.py
 cashfree_verification/models/vehicle_rc_response_schema.py
 cashfree_verification/models/voter_id_request_schema.py
 cashfree_verification/models/voter_id_response_schema.py
-cashfree_verification/models/vpa_from_phone500_schema.py
 cashfree_verification/models/x_client_id_missing.py
 cashfree_verification/py.typed
 cashfree_verification/rest.py
@@ -228,11 +222,6 @@ docs/ReverseGeocodingResponseSchema.md
 docs/ReversePennyDropApi.md
 docs/SplitAddress.md
 docs/SplitAddressSchema.md
-docs/UPIApi.md
-docs/UpiAdvanceRequestSchema.md
-docs/UpiAdvanceResponseSchema.md
-docs/UpiMobileRequestSchema.md
-docs/UpiMobileResponseSchema.md
 docs/V2ErrorResponse404SchemaIpVerification.md
 docs/ValidityDetails.md
 docs/VehicleRCApi.md
@@ -241,7 +230,6 @@ docs/VehicleRcResponseSchema.md
 docs/VoterIDApi.md
 docs/VoterIdRequestSchema.md
 docs/VoterIdResponseSchema.md
-docs/VpaFromPhone500Schema.md
 docs/XClientIdMissing.md
 git_push.sh
 pyproject.toml
@@ -350,11 +338,6 @@ test/test_reverse_geocoding_response_schema.py
 test/test_reverse_penny_drop_api.py
 test/test_split_address.py
 test/test_split_address_schema.py
-test/test_upi_advance_request_schema.py
-test/test_upi_advance_response_schema.py
-test/test_upi_api.py
-test/test_upi_mobile_request_schema.py
-test/test_upi_mobile_response_schema.py
 test/test_v2_error_response404_schema_ip_verification.py
 test/test_validity_details.py
 test/test_vehicle_rc_api.py
@@ -363,6 +346,5 @@ test/test_vehicle_rc_response_schema.py
 test/test_voter_id_api.py
 test/test_voter_id_request_schema.py
 test/test_voter_id_response_schema.py
-test/test_vpa_from_phone500_schema.py
 test/test_x_client_id_missing.py
 tox.ini

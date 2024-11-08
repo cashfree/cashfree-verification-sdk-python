@@ -11,6 +11,7 @@ Cashfree's Verification API Documentation - https://docs.cashfree.com/reference/
 
 Try out our interactive guides at [Cashfree Dev Studio](https://www.cashfree.com/devstudio) !
 
+## Getting Started
 
 ### Installation
 ```bash
@@ -18,7 +19,7 @@ pip install cashfree_verification
 ```
 ### Configuration
 
-```
+
 Cashfree.XClientId = "<x-client-id>"
 Cashfree.XClientSecret = "<x-client-secret>"
 Cashfree.XEnvironment = Cashfree.SANDBOX
@@ -26,3 +27,8 @@ x_api_version = "2022-09-01"
 ```
 
 Generate your API keys (x-client-id , x-client-secret) from [Cashfree Merchant Dashboard](https://merchant.cashfree.com/merchants/login)
+
+
+## Licence
+
+Apache Licensed. See [LICENSE.md](LICENSE.md) for more details

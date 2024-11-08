@@ -39,12 +39,12 @@ class TestAadhaarmaskingrequestschema(unittest.TestCase):
         model = cashfree_verification.models.aadhaarmaskingrequestschema.Aadhaarmaskingrequestschema()  # noqa: E501
         if include_optional :
             return Aadhaarmaskingrequestschema(
-                image = '[B@5e6bbe63', 
+                image = '[B@6839d03b', 
                 verification_id = 'testverificationid'
             )
         else :
             return Aadhaarmaskingrequestschema(
-                image = '[B@5e6bbe63',
+                image = '[B@6839d03b',
                 verification_id = 'testverificationid',
         )
         """

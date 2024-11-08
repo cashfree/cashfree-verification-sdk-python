@@ -40,13 +40,13 @@ class TestLivelinessRequestSchema(unittest.TestCase):
         if include_optional :
             return LivelinessRequestSchema(
                 verification_id = '123', 
-                image = '[B@74bcf1ab', 
+                image = '[B@58945295', 
                 strict_check = True
             )
         else :
             return LivelinessRequestSchema(
                 verification_id = '123',
-                image = '[B@74bcf1ab',
+                image = '[B@58945295',
         )
         """
 

@@ -38,6 +38,9 @@ import os
 import re
 import tempfile
 import warnings
+import base64
+import hashlib
+import hmac
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 from typing import overload, Optional, Union, Awaitable
@@ -142,17 +145,12 @@ from cashfree_verification.models.reverse_geocoding_request_schema import *
 from cashfree_verification.models.reverse_geocoding_response_schema import *
 from cashfree_verification.models.split_address import *
 from cashfree_verification.models.split_address_schema import *
-from cashfree_verification.models.upi_advance_request_schema import *
-from cashfree_verification.models.upi_advance_response_schema import *
-from cashfree_verification.models.upi_mobile_request_schema import *
-from cashfree_verification.models.upi_mobile_response_schema import *
 from cashfree_verification.models.v2_error_response404_schema_ip_verification import *
 from cashfree_verification.models.validity_details import *
 from cashfree_verification.models.vehicle_rc_request_schema import *
 from cashfree_verification.models.vehicle_rc_response_schema import *
 from cashfree_verification.models.voter_id_request_schema import *
 from cashfree_verification.models.voter_id_response_schema import *
-from cashfree_verification.models.vpa_from_phone500_schema import *
 from cashfree_verification.models.x_client_id_missing import *
 
 class CFEnvironment(Enum):
@@ -269,7 +267,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -414,7 +412,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -552,7 +550,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -686,7 +684,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -823,7 +821,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -962,7 +960,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -1101,7 +1099,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -1253,7 +1251,7 @@ class Cashfree:
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -1390,7 +1388,7 @@ class Cashfree:
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -1518,7 +1516,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -1657,7 +1655,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -1794,7 +1792,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -1939,7 +1937,7 @@ class Cashfree:
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -2084,7 +2082,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -2238,7 +2236,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -2372,7 +2370,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -2516,7 +2514,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -2661,7 +2659,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -2803,7 +2801,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -2951,7 +2949,7 @@ class Cashfree:
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -3083,7 +3081,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -3210,7 +3208,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -3354,7 +3352,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -3496,7 +3494,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -3633,7 +3631,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -3772,7 +3770,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -3911,7 +3909,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -4047,7 +4045,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -4189,7 +4187,7 @@ class Cashfree:
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -4213,281 +4211,6 @@ class Cashfree:
 
         return api_client.call_api(
             '/remitter/status', 'GET',
-            _path_params,
-            _query_params,
-            _header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            response_types_map=_response_types_map,
-            auth_settings=_auth_settings,
-            async_req=_params.get('async_req'),
-            _return_http_data_only=_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=_params.get('_preload_content', True),
-            _request_timeout=_params.get('_request_timeout'),
-            collection_formats=_collection_formats,
-            _request_auth=_params.get('_request_auth'))
-
-    @validate_arguments
-    def vrs_upi_advance_verification(self, upi_advance_request_schema : Annotated[UpiAdvanceRequestSchema, Field(..., description="Find the request parameters to retrieve the UPI VPA information of your customer")] = None, x_cf_signature : Annotated[Optional[StrictStr], Field(description="Send the signature if IP is not whitelisted")] = None, **kwargs) -> ApiResponse:  # noqa: E501
-        """UPI 360  # noqa: E501
-
-        Use this API to verify UPI information of your customers along with IFSC and the name as registered in the bank records. View the [test data](https://docs.cashfree.com/docs/data-to-testintegration) and use the information to trigger the validations. The test data are usable only in the test environments such as gamma and sandbox.   ### Response Codes   | Sub Code         |     Status    |    Message                                                  | Next Action   | ---------------- |---------------|-------------------------------------------------------------|-------------------------|   | 200              | SUCCESS       | VALID                                      | -   | 200              | SUCCESS       | INVALID                                        | Enter a valid VPA in the request.  | 200              | SUCCESS       | Vpa has expired                                        | -   | 400              | ERROR         | vpa should be valid.               | Enter a valid VPA in the request.   | 400              | ERROR         | vpa is missing in the request.                  | Enter a value for vpa in the request.   | 400              | ERROR         | x-client-id is missing in the request.                      | Enter all the header information in the API request.   | 401              | ERROR         | Invalid clientId and clientSecret combination               | Ensure you enter valid x-client-id and x-client-secret information in the API request.  | 403              | ERROR         | IP not whitelisted                                           | Whitelist the IP address.   | 422              | ERROR         | Insufficient balance to process this request                | Try again with sufficient balance.  | 500              | ERROR         | something went wrong                      | Try again after some time.  | 502              | ERROR         | Unable to process your request. Try again after some time.            | Try again after some time.   # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-
-        >>> thread = api.vrs_upi_advance_verification_with_http_info(upi_advance_request_schema, x_cf_signature, async_req=True)
-        >>> result = thread.get()
-
-        :param upi_advance_request_schema: Find the request parameters to retrieve the UPI VPA information of your customer (required)
-        :type upi_advance_request_schema: UpiAdvanceRequestSchema
-        :param x_cf_signature: Send the signature if IP is not whitelisted
-        :type x_cf_signature: str
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
-        :param _preload_content: if False, the ApiResponse.data will
-                                 be set to none and raw_data will store the 
-                                 HTTP response body without reading/decoding.
-                                 Default is True.
-        :type _preload_content: bool, optional
-        :param _return_http_data_only: response data instead of ApiResponse
-                                       object with status code, headers, etc
-        :type _return_http_data_only: bool, optional
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :type _content_type: string, optional: force content-type for the request
-        :return: Returns the result object.
-                 If the method is called asynchronously,
-                 returns the request thread.
-        :rtype: tuple(UpiAdvanceResponseSchema, status_code(int), headers(HTTPHeaderDict))
-        """
-
-        api_client = ApiClient.get_default()
-        host = "https://api.cashfree.com/verification"
-        if Cashfree.XEnvironment == CFEnvironment.SANDBOX:
-            host = "https://sandbox.cashfree.com/verification"
-        configuration = Configuration(
-            host = host
-        )
-        configuration.api_key['XClientID'] = Cashfree.XClientId
-        configuration.api_key['XClientSecret'] = Cashfree.XClientSecret
-        api_client.configuration = configuration
-        _params = locals()
-
-        _all_params = [
-            'upi_advance_request_schema',
-            'x_cf_signature'
-        ]
-        _all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout',
-                '_request_auth',
-                '_content_type',
-                '_headers'
-            ]
-        )
-
-        # validate the arguments
-        for _key, _val in _params['kwargs'].items():
-            if _key not in _all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method vrs_upi_advance_verification" % _key
-                )
-            _params[_key] = _val
-        del _params['kwargs']
-
-        _collection_formats = {}
-
-        # process the path parameters
-        _path_params = {}
-
-        # process the query parameters
-        _query_params = []
-        # process the header parameters
-        _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
-
-        # process the form parameters
-        _form_params = []
-        _files = {}
-        # process the body parameter
-        _body_params = None
-        if _params['upi_advance_request_schema'] is not None:
-            _body_params = _params['upi_advance_request_schema']
-
-        # set the HTTP header `Accept`
-        _header_params['Accept'] = api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # set the HTTP header `Content-Type`
-        _content_types_list = _params.get('_content_type',
-            api_client.select_header_content_type(
-                ['application/json']))
-        if _content_types_list:
-                _header_params['Content-Type'] = _content_types_list
-
-        # authentication setting
-        _auth_settings = ['XClientSecret', 'XClientID']  # noqa: E501
-
-        _response_types_map = {
-            '200': "UpiAdvanceResponseSchema",
-            '400': "ErrorResponseSchema",
-            '401': "ErrorResponseSchema",
-            '403': "ErrorResponseSchema",
-            '422': "ErrorResponseSchema",
-            '500': "ErrorResponseSchema",
-            '502': "ErrorResponseSchema",
-        }
-
-        return api_client.call_api(
-            '/upi/advance', 'POST',
-            _path_params,
-            _query_params,
-            _header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            response_types_map=_response_types_map,
-            auth_settings=_auth_settings,
-            async_req=_params.get('async_req'),
-            _return_http_data_only=_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=_params.get('_preload_content', True),
-            _request_timeout=_params.get('_request_timeout'),
-            collection_formats=_collection_formats,
-            _request_auth=_params.get('_request_auth'))
-    @validate_arguments
-    def vrs_upi_mobile_verification(self, upi_mobile_request_schema : Annotated[UpiMobileRequestSchema, Field(..., description="Find the request parameters to retrieve the list of UPI VPA associated with the mobile number")] = None, x_cf_signature : Annotated[Optional[StrictStr], Field(description="Send the signature if IP is not whitelisted")] = None, **kwargs) -> ApiResponse:  # noqa: E501
-        """Get Multiple VPA from Phone Number.  # noqa: E501
-
-        Use this API to fetch the account holder name along with the UPI VPA information of your customer by providing the phone number. View the [test data](https://docs.cashfree.com/docs/data-to-testintegration#upi) and use the information to trigger the validations. The test data are usable only in the test environments such as gamma and sandbox.   ### Response Codes    | Sub Code         |     Status    |    Message                                                  | Next Action   | ---------------- |---------------|-------------------------------------------------------------|-------------------------|   | 200      | SUCCESS | VALID                                         | -                                                                  | 200      | SUCCESS | No UPI ID found linked to the Mobile Number   | Enter a mobile number linked to at least one UPI VPA.              | 200      | SUCCESS | Unable to validate, please retry later        | Try again after some time.                                         | 400      | ERROR   | Mobile number entered is invalid.             | Enter a valid mobile number.                                       | 400      | ERROR   | mobile_number is missing in the request.      | Enter a valid mobile number in the API request.                    | 400      | ERROR   | x-client-id is missing in the request.        | Enter all the header information in the API request.               | 401      | ERROR   | Invalid clientId and clientSecret combination | Enter valid client ID and secret key in the request.               | 403      | ERROR   | IP not whitelisted                            | Whitelist the IP address.                                          | 409      | ERROR   | verification id already exists                | Create a unique verification ID to identify the request.           | 422      | ERROR   | Insufficient balance to process this request  | Ensure you have sufficient balance and then process the request.   | 500      | ERROR   | something went wrong                          | Try again after some time.                                       |     # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-
-        >>> thread = api.vrs_upi_mobile_verification_with_http_info(upi_mobile_request_schema, x_cf_signature, async_req=True)
-        >>> result = thread.get()
-
-        :param upi_mobile_request_schema: Find the request parameters to retrieve the list of UPI VPA associated with the mobile number (required)
-        :type upi_mobile_request_schema: UpiMobileRequestSchema
-        :param x_cf_signature: Send the signature if IP is not whitelisted
-        :type x_cf_signature: str
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
-        :param _preload_content: if False, the ApiResponse.data will
-                                 be set to none and raw_data will store the 
-                                 HTTP response body without reading/decoding.
-                                 Default is True.
-        :type _preload_content: bool, optional
-        :param _return_http_data_only: response data instead of ApiResponse
-                                       object with status code, headers, etc
-        :type _return_http_data_only: bool, optional
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :type _content_type: string, optional: force content-type for the request
-        :return: Returns the result object.
-                 If the method is called asynchronously,
-                 returns the request thread.
-        :rtype: tuple(UpiMobileResponseSchema, status_code(int), headers(HTTPHeaderDict))
-        """
-
-        api_client = ApiClient.get_default()
-        host = "https://api.cashfree.com/verification"
-        if Cashfree.XEnvironment == CFEnvironment.SANDBOX:
-            host = "https://sandbox.cashfree.com/verification"
-        configuration = Configuration(
-            host = host
-        )
-        configuration.api_key['XClientID'] = Cashfree.XClientId
-        configuration.api_key['XClientSecret'] = Cashfree.XClientSecret
-        api_client.configuration = configuration
-        _params = locals()
-
-        _all_params = [
-            'upi_mobile_request_schema',
-            'x_cf_signature'
-        ]
-        _all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout',
-                '_request_auth',
-                '_content_type',
-                '_headers'
-            ]
-        )
-
-        # validate the arguments
-        for _key, _val in _params['kwargs'].items():
-            if _key not in _all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method vrs_upi_mobile_verification" % _key
-                )
-            _params[_key] = _val
-        del _params['kwargs']
-
-        _collection_formats = {}
-
-        # process the path parameters
-        _path_params = {}
-
-        # process the query parameters
-        _query_params = []
-        # process the header parameters
-        _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
-
-        # process the form parameters
-        _form_params = []
-        _files = {}
-        # process the body parameter
-        _body_params = None
-        if _params['upi_mobile_request_schema'] is not None:
-            _body_params = _params['upi_mobile_request_schema']
-
-        # set the HTTP header `Accept`
-        _header_params['Accept'] = api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # set the HTTP header `Content-Type`
-        _content_types_list = _params.get('_content_type',
-            api_client.select_header_content_type(
-                ['application/json']))
-        if _content_types_list:
-                _header_params['Content-Type'] = _content_types_list
-
-        # authentication setting
-        _auth_settings = ['XClientSecret', 'XClientID']  # noqa: E501
-
-        _response_types_map = {
-            '200': "UpiMobileResponseSchema",
-            '400': "ErrorResponseSchema",
-            '401': "ErrorResponseSchema",
-            '403': "ErrorResponseSchema",
-            '409': "ErrorResponseSchema",
-            '422': "ErrorResponseSchema",
-            '500': "ErrorResponseSchema",
-        }
-
-        return api_client.call_api(
-            '/upi/mobile', 'POST',
             _path_params,
             _query_params,
             _header_params,
@@ -4590,7 +4313,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -4729,7 +4452,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-1.0.3"
+        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
 
         # process the form parameters
         _form_params = []
@@ -4828,7 +4551,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'OpenAPI-Generator/1.0.3/python'
+        self.user_agent = 'OpenAPI-Generator/2.0.0/python'
         self.client_side_validation = configuration.client_side_validation
 
     def __enter__(self):
