@@ -108,6 +108,14 @@ from cashfree_verification.models.e_sign_verification_get_status_response_schema
 from cashfree_verification.models.e_sign_verification_upload_document_request_schema import *
 from cashfree_verification.models.e_sign_verification_upload_document_response_schema import *
 from cashfree_verification.models.error_response_schema import *
+from cashfree_verification.models.face_liveness200_response_schema import *
+from cashfree_verification.models.face_liveness200_response_schema_age_range import *
+from cashfree_verification.models.face_liveness200_response_schema_eye_wear import *
+from cashfree_verification.models.face_liveness200_response_schema_eyes_open import *
+from cashfree_verification.models.face_liveness200_response_schema_face_occluded import *
+from cashfree_verification.models.face_liveness200_response_schema_gender import *
+from cashfree_verification.models.face_liveness200_response_schema_pose import *
+from cashfree_verification.models.face_liveness200_response_schema_quality import *
 from cashfree_verification.models.face_match_request_schema import *
 from cashfree_verification.models.face_match_response_schema import *
 from cashfree_verification.models.get_pan_bulk_response_schema import *
@@ -121,7 +129,6 @@ from cashfree_verification.models.invaliddoctypeschema import *
 from cashfree_verification.models.ip_verification_request_schema import *
 from cashfree_verification.models.ip_verification_response_schema import *
 from cashfree_verification.models.liveliness_request_schema import *
-from cashfree_verification.models.liveliness_response_schema import *
 from cashfree_verification.models.name_match_request_schema import *
 from cashfree_verification.models.name_match_response_schema import *
 from cashfree_verification.models.offline_aadhaar_send_otp_request_schema import *
@@ -267,7 +274,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -412,7 +419,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -550,7 +557,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -684,7 +691,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -821,7 +828,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -960,7 +967,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -1099,7 +1106,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -1251,7 +1258,7 @@ class Cashfree:
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -1388,7 +1395,7 @@ class Cashfree:
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -1516,7 +1523,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -1655,7 +1662,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -1792,7 +1799,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -1937,7 +1944,7 @@ class Cashfree:
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -1962,6 +1969,154 @@ class Cashfree:
 
         return api_client.call_api(
             '/esignature', 'GET',
+            _path_params,
+            _query_params,
+            _header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            response_types_map=_response_types_map,
+            auth_settings=_auth_settings,
+            async_req=_params.get('async_req'),
+            _return_http_data_only=_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=_params.get('_preload_content', True),
+            _request_timeout=_params.get('_request_timeout'),
+            collection_formats=_collection_formats,
+            _request_auth=_params.get('_request_auth'))
+
+    @validate_arguments
+    def vrs_face_liveness_check(self, x_api_version : Annotated[StrictStr, Field(..., description="API version to be used. Format is in YYYY-MM-DD.")] = None, verification_id : Annotated[StrictStr, Field(..., description="It is the unique ID you create to identify the verification request. The maximum character limit is 50. Only alphanumeric, period (.), hyphen (-) and underscore ( _ ) are allowed.")] = None, image : Annotated[Union[StrictBytes, StrictStr], Field(..., description="Upload the image of the individual to verify the liveness of the image. Supported types are jpeg, jpg and png.")] = None, x_cf_signature : Annotated[Optional[StrictStr], Field(description="Send the signature if IP is not whitelisted")] = None, **kwargs) -> ApiResponse:  # noqa: E501
+        """Face Liveness Check  # noqa: E501
+
+        Use this API to detect live human presence and authenticate facial biometrics. The API analyzes facial characteristics and liveness signals to prevent spoofing attempts and validate genuine user presence.  Returns comprehensive facial analysis including liveness confidence score and quality metrics. View the [test data](https://www.cashfree.com/docs/api-reference/vrs/data-to-test-integration#face-liveness) and use the information to trigger the validations. The test data are usable only in the test environment sandbox.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.vrs_face_liveness_check_with_http_info(x_api_version, verification_id, image, x_cf_signature, async_req=True)
+        >>> result = thread.get()
+
+        :param x_api_version: API version to be used. Format is in YYYY-MM-DD. (required)
+        :type x_api_version: str
+        :param verification_id: It is the unique ID you create to identify the verification request. The maximum character limit is 50. Only alphanumeric, period (.), hyphen (-) and underscore ( _ ) are allowed. (required)
+        :type verification_id: str
+        :param image: Upload the image of the individual to verify the liveness of the image. Supported types are jpeg, jpg and png. (required)
+        :type image: bytearray
+        :param x_cf_signature: Send the signature if IP is not whitelisted
+        :type x_cf_signature: str
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _preload_content: if False, the ApiResponse.data will
+                                 be set to none and raw_data will store the 
+                                 HTTP response body without reading/decoding.
+                                 Default is True.
+        :type _preload_content: bool, optional
+        :param _return_http_data_only: response data instead of ApiResponse
+                                       object with status code, headers, etc
+        :type _return_http_data_only: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the authentication
+                              in the spec for a single request.
+        :type _request_auth: dict, optional
+        :type _content_type: string, optional: force content-type for the request
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: tuple(FaceLiveness200ResponseSchema, status_code(int), headers(HTTPHeaderDict))
+        """
+
+        api_client = ApiClient.get_default()
+        host = "https://api.cashfree.com/verification"
+        if Cashfree.XEnvironment == CFEnvironment.SANDBOX:
+            host = "https://sandbox.cashfree.com/verification"
+        configuration = Configuration(
+            host = host
+        )
+        configuration.api_key['XClientID'] = Cashfree.XClientId
+        configuration.api_key['XClientSecret'] = Cashfree.XClientSecret
+        api_client.configuration = configuration
+        _params = locals()
+
+        _all_params = [
+            'x_api_version',
+            'verification_id',
+            'image',
+            'x_cf_signature'
+        ]
+        _all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout',
+                '_request_auth',
+                '_content_type',
+                '_headers'
+            ]
+        )
+
+        # validate the arguments
+        for _key, _val in _params['kwargs'].items():
+            if _key not in _all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method vrs_face_liveness_check" % _key
+                )
+            _params[_key] = _val
+        del _params['kwargs']
+
+        _collection_formats = {}
+
+        # process the path parameters
+        _path_params = {}
+
+        # process the query parameters
+        _query_params = []
+        # process the header parameters
+        _header_params = dict(_params.get('_headers', {}))
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
+
+        # process the form parameters
+        _form_params = []
+        _files = {}
+        if _params['verification_id']:
+            _form_params.append(('verification_id', _params['verification_id']))
+
+        if _params['image']:
+            _files['image'] = _params['image']
+
+        # process the body parameter
+        _body_params = None
+        # set the HTTP header `Accept`
+        _header_params['Accept'] = api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # set the HTTP header `Content-Type`
+        _content_types_list = _params.get('_content_type',
+            api_client.select_header_content_type(
+                ['multipart/form-data']))
+        if _content_types_list:
+                _header_params['Content-Type'] = _content_types_list
+
+        # authentication setting
+        _auth_settings = ['XClientSecret', 'XClientID']  # noqa: E501
+
+        _response_types_map = {
+            '200': "FaceLiveness200ResponseSchema",
+            '400': "ErrorResponseSchema",
+            '401': "ErrorResponseSchema",
+            '403': "ErrorResponseSchema",
+            '409': "ErrorResponseSchema",
+            '422': "ErrorResponseSchema",
+            '500': "ErrorResponseSchema",
+            '502': "ErrorResponseSchema",
+        }
+
+        return api_client.call_api(
+            '/face-liveness', 'POST',
             _path_params,
             _query_params,
             _header_params,
@@ -2082,7 +2237,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -2236,7 +2391,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -2370,7 +2525,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -2406,157 +2561,6 @@ class Cashfree:
 
         return api_client.call_api(
             '/ip', 'POST',
-            _path_params,
-            _query_params,
-            _header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            response_types_map=_response_types_map,
-            auth_settings=_auth_settings,
-            async_req=_params.get('async_req'),
-            _return_http_data_only=_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=_params.get('_preload_content', True),
-            _request_timeout=_params.get('_request_timeout'),
-            collection_formats=_collection_formats,
-            _request_auth=_params.get('_request_auth'))
-
-    @validate_arguments
-    def vrs_liveliness_check(self, verification_id : Annotated[StrictStr, Field(..., description="It is the unique ID you create to identify the verification request. The maximum character limit is 50. Only alphanumeric, period (.), hyphen (-) and underscore ( _ ) are allowed.")] = None, image : Annotated[Union[StrictBytes, StrictStr], Field(..., description="Upload the image of the individual to verify the liveliness of the image.")] = None, x_cf_signature : Annotated[Optional[StrictStr], Field(description="Send the signature if IP is not whitelisted")] = None, strict_check : Annotated[Optional[StrictBool], Field(description="It is the boolean value to set the strictness check of the image. Default value for strict_check is false.")] = None, **kwargs) -> ApiResponse:  # noqa: E501
-        """Liveliness Check  # noqa: E501
-
-        Use this API to verify if the customer is genuine and not a bot. We analyse the facial features of your customer in the picture or a selfie for identification. View the [test data](https://docs.cashfree.com/docs/data-to-testintegration) and use the information to trigger the validations. The test data are usable only in the test environments such as gamma and sandbox.   ### Response Codes   | Sub Code         |     Status    |    Message                                                  | Next Action   | ---------------- |---------------|-------------------------------------------------------------|-------------------------|   | 200              | SUCCESS       | VALID                                      | -   | 200              | SUCCESS       | FACE_NOT_DETECTED                                      | Upload a different image with the individual's face in it.   | 200              | SUCCESS       |MULTIPLE_FACE_DETECTED                                      | Upload a different image with only the individual's face in it.    | 400              | ERROR         | image is missing in the request.                  | Upload an image in the request. | 400              | ERROR         | File size exceeded 10MB limit                  | Upload a file that does not exceed the maximum file size.  | 400              | ERROR         | verification_id can include only alphanum, dot, hyphen and underscores.                  | Only alphanumeric, period (.), hyphen (-), and underscore ( _ ) are allowed.     | 400              | ERROR         | x-client-id is missing in the request.                      | Enter all the header information in the API request.   | 401              | ERROR         | Invalid clientId and clientSecret combination               | Ensure you enter valid x-client-id and x-client-secret information in the API request.  | 403              | ERROR         | IP not whitelisted                                           | Whitelist the IP address.  | 409              | ERROR         | verification id already exists                                           | Enter a unique verification ID to identify the request.  | 422              | ERROR         | Insufficient balance to process this request                | Try again with sufficient balance.  | 500              | ERROR         | something went wrong                      | Try again after some time.  | 502              | ERROR         | verification attempt failed                      | Try again after some time.   # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-
-        >>> thread = api.vrs_liveliness_check_with_http_info(verification_id, image, x_cf_signature, strict_check, async_req=True)
-        >>> result = thread.get()
-
-        :param verification_id: It is the unique ID you create to identify the verification request. The maximum character limit is 50. Only alphanumeric, period (.), hyphen (-) and underscore ( _ ) are allowed. (required)
-        :type verification_id: str
-        :param image: Upload the image of the individual to verify the liveliness of the image. (required)
-        :type image: bytearray
-        :param x_cf_signature: Send the signature if IP is not whitelisted
-        :type x_cf_signature: str
-        :param strict_check: It is the boolean value to set the strictness check of the image. Default value for strict_check is false.
-        :type strict_check: bool
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
-        :param _preload_content: if False, the ApiResponse.data will
-                                 be set to none and raw_data will store the 
-                                 HTTP response body without reading/decoding.
-                                 Default is True.
-        :type _preload_content: bool, optional
-        :param _return_http_data_only: response data instead of ApiResponse
-                                       object with status code, headers, etc
-        :type _return_http_data_only: bool, optional
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :type _content_type: string, optional: force content-type for the request
-        :return: Returns the result object.
-                 If the method is called asynchronously,
-                 returns the request thread.
-        :rtype: tuple(LivelinessResponseSchema, status_code(int), headers(HTTPHeaderDict))
-        """
-
-        api_client = ApiClient.get_default()
-        host = "https://api.cashfree.com/verification"
-        if Cashfree.XEnvironment == CFEnvironment.SANDBOX:
-            host = "https://sandbox.cashfree.com/verification"
-        configuration = Configuration(
-            host = host
-        )
-        configuration.api_key['XClientID'] = Cashfree.XClientId
-        configuration.api_key['XClientSecret'] = Cashfree.XClientSecret
-        api_client.configuration = configuration
-        _params = locals()
-
-        _all_params = [
-            'verification_id',
-            'image',
-            'x_cf_signature',
-            'strict_check'
-        ]
-        _all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout',
-                '_request_auth',
-                '_content_type',
-                '_headers'
-            ]
-        )
-
-        # validate the arguments
-        for _key, _val in _params['kwargs'].items():
-            if _key not in _all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method vrs_liveliness_check" % _key
-                )
-            _params[_key] = _val
-        del _params['kwargs']
-
-        _collection_formats = {}
-
-        # process the path parameters
-        _path_params = {}
-
-        # process the query parameters
-        _query_params = []
-        # process the header parameters
-        _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
-
-        # process the form parameters
-        _form_params = []
-        _files = {}
-        if _params['verification_id']:
-            _form_params.append(('verification_id', _params['verification_id']))
-
-        if _params['image']:
-            _files['image'] = _params['image']
-
-        if _params['strict_check']:
-            _form_params.append(('strict_check', _params['strict_check']))
-
-        # process the body parameter
-        _body_params = None
-        # set the HTTP header `Accept`
-        _header_params['Accept'] = api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # set the HTTP header `Content-Type`
-        _content_types_list = _params.get('_content_type',
-            api_client.select_header_content_type(
-                ['multipart/form-data']))
-        if _content_types_list:
-                _header_params['Content-Type'] = _content_types_list
-
-        # authentication setting
-        _auth_settings = ['XClientSecret', 'XClientID']  # noqa: E501
-
-        _response_types_map = {
-            '200': "LivelinessResponseSchema",
-            '400': "ErrorResponseSchema",
-            '401': "ErrorResponseSchema",
-            '403': "ErrorResponseSchema",
-            '409': "ErrorResponseSchema",
-            '422': "ErrorResponseSchema",
-            '500': "ErrorResponseSchema",
-            '502': "ErrorResponseSchema",
-        }
-
-        return api_client.call_api(
-            '/liveliness', 'POST',
             _path_params,
             _query_params,
             _header_params,
@@ -2659,7 +2663,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -2801,7 +2805,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -2949,7 +2953,7 @@ class Cashfree:
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -3081,7 +3085,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -3208,7 +3212,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -3352,7 +3356,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -3494,7 +3498,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -3631,7 +3635,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -3770,7 +3774,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -3909,7 +3913,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -4045,7 +4049,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -4187,7 +4191,7 @@ class Cashfree:
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -4313,7 +4317,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -4452,7 +4456,7 @@ class Cashfree:
         _query_params = []
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
-        _header_params["x-sdk-platform"] = "pythonsdk-2.0.0"
+        _header_params["x-sdk-platform"] = "pythonsdk-3.0.0"
 
         # process the form parameters
         _form_params = []
@@ -4551,7 +4555,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'OpenAPI-Generator/2.0.0/python'
+        self.user_agent = 'OpenAPI-Generator/3.0.0/python'
         self.client_side_validation = configuration.client_side_validation
 
     def __enter__(self):

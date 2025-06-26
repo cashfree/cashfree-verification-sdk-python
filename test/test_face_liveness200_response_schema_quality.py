@@ -17,11 +17,11 @@ import unittest
 import datetime
 
 import cashfree_verification
-from cashfree_verification.models.liveliness_request_schema import LivelinessRequestSchema  # noqa: E501
+from cashfree_verification.models.face_liveness200_response_schema_quality import FaceLiveness200ResponseSchemaQuality  # noqa: E501
 from cashfree_verification.rest import ApiException
 
-class TestLivelinessRequestSchema(unittest.TestCase):
-    """LivelinessRequestSchema unit test stubs"""
+class TestFaceLiveness200ResponseSchemaQuality(unittest.TestCase):
+    """FaceLiveness200ResponseSchemaQuality unit test stubs"""
 
     def setUp(self):
         pass
@@ -30,28 +30,26 @@ class TestLivelinessRequestSchema(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test LivelinessRequestSchema
+        """Test FaceLiveness200ResponseSchemaQuality
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `LivelinessRequestSchema`
+        # uncomment below to create an instance of `FaceLiveness200ResponseSchemaQuality`
         """
-        model = cashfree_verification.models.liveliness_request_schema.LivelinessRequestSchema()  # noqa: E501
+        model = cashfree_verification.models.face_liveness200_response_schema_quality.FaceLiveness200ResponseSchemaQuality()  # noqa: E501
         if include_optional :
-            return LivelinessRequestSchema(
-                verification_id = '123', 
-                image = '[B@244f356', 
-                strict_check = True
+            return FaceLiveness200ResponseSchemaQuality(
+                blur = False, 
+                bright = True, 
+                exposure = 'NEUTRAL'
             )
         else :
-            return LivelinessRequestSchema(
-                verification_id = '123',
-                image = '[B@244f356',
+            return FaceLiveness200ResponseSchemaQuality(
         )
         """
 
-    def testLivelinessRequestSchema(self):
-        """Test LivelinessRequestSchema"""
+    def testFaceLiveness200ResponseSchemaQuality(self):
+        """Test FaceLiveness200ResponseSchemaQuality"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

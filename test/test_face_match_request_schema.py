@@ -40,8 +40,8 @@ class TestFaceMatchRequestSchema(unittest.TestCase):
         if include_optional :
             return FaceMatchRequestSchema(
                 verification_id = '12345678', 
-                first_image = '[B@1c0fe6c5', 
-                second_image = '[B@61607ff0', 
+                first_image = '[B@6f8fb906', 
+                second_image = '[B@728535c6', 
                 threshold = '0.5', 
                 detect_mask_first_image = True, 
                 detect_mask_second_image = True, 
@@ -50,8 +50,8 @@ class TestFaceMatchRequestSchema(unittest.TestCase):
         else :
             return FaceMatchRequestSchema(
                 verification_id = '12345678',
-                first_image = '[B@1c0fe6c5',
-                second_image = '[B@61607ff0',
+                first_image = '[B@6f8fb906',
+                second_image = '[B@728535c6',
         )
         """
 

@@ -39,11 +39,11 @@ class TestESignVerificationUploadDocumentRequestSchema(unittest.TestCase):
         model = cashfree_verification.models.e_sign_verification_upload_document_request_schema.ESignVerificationUploadDocumentRequestSchema()  # noqa: E501
         if include_optional :
             return ESignVerificationUploadDocumentRequestSchema(
-                document = '[B@357cdb00'
+                document = '[B@766db6f9'
             )
         else :
             return ESignVerificationUploadDocumentRequestSchema(
-                document = '[B@357cdb00',
+                document = '[B@766db6f9',
         )
         """
 
