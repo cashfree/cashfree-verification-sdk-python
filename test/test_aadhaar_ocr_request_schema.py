@@ -40,13 +40,13 @@ class TestAadhaarOcrRequestSchema(unittest.TestCase):
         if include_optional :
             return AadhaarOcrRequestSchema(
                 verification_id = '12345678', 
-                back_image = '[B@42d7e8bc', 
-                front_image = '[B@7b6854b5'
+                back_image = '[B@2ce62e27', 
+                front_image = '[B@3538a129'
             )
         else :
             return AadhaarOcrRequestSchema(
                 verification_id = '12345678',
-                front_image = '[B@7b6854b5',
+                front_image = '[B@3538a129',
         )
         """
 

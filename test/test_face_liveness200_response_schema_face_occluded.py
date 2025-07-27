@@ -17,11 +17,11 @@ import unittest
 import datetime
 
 import cashfree_verification
-from cashfree_verification.models.liveliness_request_schema import LivelinessRequestSchema  # noqa: E501
+from cashfree_verification.models.face_liveness200_response_schema_face_occluded import FaceLiveness200ResponseSchemaFaceOccluded  # noqa: E501
 from cashfree_verification.rest import ApiException
 
-class TestLivelinessRequestSchema(unittest.TestCase):
-    """LivelinessRequestSchema unit test stubs"""
+class TestFaceLiveness200ResponseSchemaFaceOccluded(unittest.TestCase):
+    """FaceLiveness200ResponseSchemaFaceOccluded unit test stubs"""
 
     def setUp(self):
         pass
@@ -30,28 +30,25 @@ class TestLivelinessRequestSchema(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test LivelinessRequestSchema
+        """Test FaceLiveness200ResponseSchemaFaceOccluded
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `LivelinessRequestSchema`
+        # uncomment below to create an instance of `FaceLiveness200ResponseSchemaFaceOccluded`
         """
-        model = cashfree_verification.models.liveliness_request_schema.LivelinessRequestSchema()  # noqa: E501
+        model = cashfree_verification.models.face_liveness200_response_schema_face_occluded.FaceLiveness200ResponseSchemaFaceOccluded()  # noqa: E501
         if include_optional :
-            return LivelinessRequestSchema(
-                verification_id = '123', 
-                image = '[B@244f356', 
-                strict_check = True
+            return FaceLiveness200ResponseSchemaFaceOccluded(
+                value = False, 
+                confidence = 98.7
             )
         else :
-            return LivelinessRequestSchema(
-                verification_id = '123',
-                image = '[B@244f356',
+            return FaceLiveness200ResponseSchemaFaceOccluded(
         )
         """
 
-    def testLivelinessRequestSchema(self):
-        """Test LivelinessRequestSchema"""
+    def testFaceLiveness200ResponseSchemaFaceOccluded(self):
+        """Test FaceLiveness200ResponseSchemaFaceOccluded"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 
